@@ -12,7 +12,16 @@ export default class extends Phaser.State {
 
   create () {
 
-    
+    this.game.physics.startSystem(Phaser.Physics.ARCADE)
+    this.player = game.add.sprite(250,50,'player')
+
+    game.physics.arcade.enable(this.player)
+
+    this.player.body.gravity.y = 600
+
+      this.player.animations.add('iddle',[3,4,5,4])
+
+
 
   }
 

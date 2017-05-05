@@ -2,26 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="14de83c0-f7da-402b-bb9a-49b3d5ea22ff" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/coin.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/coin.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/coin.wav" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/dead.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/dead.wav" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/dust.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/dust.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/dust.wav" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/enemy.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/exp.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ground.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/jump.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/jump.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/jump.wav" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/left.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/player.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/right.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/wall.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/states/Game.js" afterPath="$PROJECT_DIR$/src/states/Game.js" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -37,8 +17,8 @@
       <file leaf-file-name="Game.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/states/Game.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="234">
-              <caret line="14" column="4" lean-forward="false" selection-start-line="14" selection-start-column="4" selection-end-line="14" selection-end-column="4" />
+            <state relative-caret-position="360">
+              <caret line="21" column="49" lean-forward="false" selection-start-line="21" selection-start-column="49" selection-end-line="21" selection-end-column="49" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
               </folding>
@@ -253,12 +233,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1493991856754</updated>
-      <workItem from="1493991865646" duration="467000" />
+      <workItem from="1493991865646" duration="942000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="467000" />
+    <option name="totallyTimeSpent" value="942000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="64" y="-11" width="1377" height="912" extended-state="6" />
@@ -302,8 +282,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/states/Game.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="14" column="4" lean-forward="false" selection-start-line="14" selection-start-column="4" selection-end-line="14" selection-end-column="4" />
+        <state relative-caret-position="360">
+          <caret line="21" column="49" lean-forward="false" selection-start-line="21" selection-start-column="49" selection-end-line="21" selection-end-column="49" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
           </folding>
