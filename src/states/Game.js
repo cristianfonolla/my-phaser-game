@@ -12,6 +12,7 @@ export default class extends Phaser.State {
     this.game.load.image('ground','assets/ground.png')
     this.game.load.image('wall','assets/wall.png')
     this.game.load.image('jump',['assets/jump.wav','assets/jump.mp3'])
+    this.game.load.image('enemy','assets/enemy.png')
 
 
   }
@@ -24,6 +25,7 @@ export default class extends Phaser.State {
       this.wall1 = this.game.add.sprite(760/2-160,400/2-80,'wall')
       this.wall2 = this.game.add.sprite(760/2+140,400/2-80,'wall')
       this.jumpSound = this.game.add.audio('jump')
+      this.enemy= this.game.add.sprite(485,180,'enemy')
 
 
 
@@ -31,9 +33,12 @@ export default class extends Phaser.State {
       this.game.physics.arcade.enable(this.ground)
       this.game.physics.arcade.enable(this.wall1)
       this.game.physics.arcade.enable(this.wall2)
+      this.game.physics.arcade.enable(this.enemy)
 
       this.player.body.gravity.y = 600
+      this.enemy.body.gravity.y = 600
       this.player.body.setSize(20,20,0,0)
+      this.enemy.body.setSize(20,20,0,0)
 
       this.ground.body.immovable = true
       this.wall1.body.immovable = true
@@ -46,6 +51,7 @@ export default class extends Phaser.State {
 
 
       this.cursor = this.game.input.keyboard.createCursorKeys()
+      this.gKey= this.game.input.keyboard.addKey(Phaser.Keyboard.G)
 
       this.hasJumped = false
 
@@ -56,6 +62,7 @@ export default class extends Phaser.State {
       this.game.physics.arcade.collide(this.player,this.ground)
       this.game.physics.arcade.collide(this.player,this.wall1)
       this.game.physics.arcade.collide(this.player,this.wall2)
+      this.game.physics.arcade.collide(this.enemy,this.ground)
 
       this.inputs()
 
@@ -65,11 +72,14 @@ export default class extends Phaser.State {
 
       }
 
+
       if(this.player.y > 100){
         this.player.hasJumped=true
       }
 
-
+      if (this.gKey.isDown){
+          this.enableFly()
+      }
 
   }
 
@@ -91,22 +101,21 @@ export default class extends Phaser.State {
           this.jumpplayer()
       }
 
+
+
   }
 
+    enableFly(){
+      this.hasJumped = false
+    }
+
   jumpplayer(){
-
-
-
 
       if(!this.hasJumped) {
           this.jumpSound.play()
           this.player.body.velocity.y = -280
           this.hasJumped = true
       }
-
-
-
-
   }
 
   render () {
