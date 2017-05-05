@@ -9,7 +9,8 @@ export default class extends Phaser.State {
     this.game.load.spritesheet('player','assets/player.png',20,22)
     this.game.load.image('ground','assets/ground.png')
     this.game.load.image('wall','assets/wall.png')
-    this.game.load.image('jump',['assets/jump.wav','assets/jump.mp3'])
+    this.game.load.image('jump','assets/jump.mp3')
+    //this.game.load.image('jump',['assets/jump.wav','assets/jump.mp3'])
 
 
   }
@@ -21,7 +22,7 @@ export default class extends Phaser.State {
       this.ground = this.game.add.sprite(760/2-160,400/2,'ground')
       this.wall1 = this.game.add.sprite(760/2-160,400/2-80,'wall')
       this.wall2 = this.game.add.sprite(760/2+140,400/2-80,'wall')
-      this.wall2 = this.game.add.audio('jump')
+      this.jumpSound = this.game.add.audio('jump')
 
 
 
@@ -39,6 +40,8 @@ export default class extends Phaser.State {
 
       this.cursor = this.game.input.keyboard.createCursorKeys()
 
+      this.hasJumped = false
+
   }
 
   update(){
@@ -46,6 +49,13 @@ export default class extends Phaser.State {
       this.game.physics.arcade.collide(this.player,this.ground)
 //      this.ground.body.x++
       this.inputs()
+
+      if(this.player.body.touching.down){
+
+          this.hasJumped = false
+
+      }
+
   }
 
   inputs (){
@@ -57,7 +67,6 @@ export default class extends Phaser.State {
           this.player.body.velocity.x = 0
       }
 
-
       if (this.cursor.up.isDown){
           this.jumpplayer()
       }
@@ -68,6 +77,13 @@ export default class extends Phaser.State {
 
 
       this.player.body.velocity.y = -100
+
+      if(!this.hasJumped) {
+          this.jumpSound.play()
+          this.hasJumped = true
+      }
+
+
 
 
   }
