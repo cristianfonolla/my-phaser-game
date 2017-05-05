@@ -8,6 +8,8 @@ export default class extends Phaser.State {
 
     this.game.load.spritesheet('player','assets/player.png',20,22)
     this.game.load.image('ground','assets/ground.png')
+    this.game.load.image('wall','assets/wall.png')
+
 
   }
 
@@ -15,8 +17,9 @@ export default class extends Phaser.State {
 
       this.game.physics.startSystem(Phaser.Physics.ARCADE);
       this.player = this.game.add.sprite(250,50,'player')
-
       this.ground = this.game.add.sprite(760/2-160,400/2,'ground')
+      this.wall1 = this.game.add.sprite(760/2-160,400/2-80,'wall')
+      this.wall2 = this.game.add.sprite(760/2+140,400/2-80,'wall')
 
 
 
@@ -39,7 +42,7 @@ export default class extends Phaser.State {
   update(){
 
       this.game.physics.arcade.collide(this.player,this.ground)
-
+//      this.ground.body.x++
 
   }
 
