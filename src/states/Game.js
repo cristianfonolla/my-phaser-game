@@ -22,11 +22,14 @@ export default class extends Phaser.State {
 
         this.game.physics.startSystem(Phaser.Physics.ARCADE);
         this.player = this.game.add.sprite(250, 101, 'player')
-        this.ground = this.game.add.sprite(760 / 2 - 160, 400 / 2, 'ground')
-        this.wall1 = this.game.add.sprite(760 / 2 - 160, 400 / 2 - 80, 'wall')
-        this.wall2 = this.game.add.sprite(760 / 2 + 140, 400 / 2 - 80, 'wall')
-        this.wall3 = this.game.add.sprite(760 / 2 + 100, 400 / 2 - 80, 'wall')
-        this.wall3.angle+=90
+        this.ground = this.game.add.sprite(0, 400 - 20, 'ground')
+        this.ground.width = 760
+        this.top = this.game.add.sprite(0, 0 - 20, 'ground')
+        this.top.width = 760
+        this.wall1 = this.game.add.sprite(0 - 20, 0, 'wall')
+        this.wall1.height = 400
+        this.wall2 = this.game.add.sprite(760, 0, 'wall')
+        this.wall2.height = 400
         this.jumpSound = this.game.add.audio('jump')
         this.enemy = this.game.add.sprite(485, 180, 'enemy')
 
@@ -35,8 +38,8 @@ export default class extends Phaser.State {
         this.game.physics.arcade.enable(this.ground)
         this.game.physics.arcade.enable(this.wall1)
         this.game.physics.arcade.enable(this.wall2)
-        this.game.physics.arcade.enable(this.wall3)
         this.game.physics.arcade.enable(this.enemy)
+        this.game.physics.arcade.enable(this.top)
 
         this.player.body.gravity.y = 600
         this.enemy.body.gravity.y = 600
@@ -46,8 +49,7 @@ export default class extends Phaser.State {
         this.ground.body.immovable = true
         this.wall1.body.immovable = true
         this.wall2.body.immovable = true
-        this.wall3.body.immovable = true
-
+        this.top.body.immovable = true
 
         this.player.animations.add('idle', [3, 4, 5, 4], 5, true);
         this.player.animations.play('idle')
@@ -72,8 +74,8 @@ export default class extends Phaser.State {
         this.game.physics.arcade.collide(this.player, this.ground)
         this.game.physics.arcade.collide(this.player, this.wall1)
         this.game.physics.arcade.collide(this.player, this.wall2)
-        this.game.physics.arcade.collide(this.player, this.wall3)
         this.game.physics.arcade.collide(this.enemy, this.ground)
+        this.game.physics.arcade.collide(this.player, this.top)
 
 
         this.inputs()
