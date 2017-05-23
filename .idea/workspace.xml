@@ -2,9 +2,39 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="14de83c0-f7da-402b-bb9a-49b3d5ea22ff" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../assets/boom.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../assets/images/tiles.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../assets/tilemaps/level1.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../assets/tilemaps/level1.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../assets/tilemaps/level1.tmx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../src/sprites/Player.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../src/states/Menu.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../src/states/Nivell1.js" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../src/sprites/Mushroom.js" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/../assets/boom.png" afterPath="$PROJECT_DIR$/../assets/old/boom.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/../assets/coin.mp3" afterPath="$PROJECT_DIR$/../assets/old/coin.mp3" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/../assets/coin.png" afterPath="$PROJECT_DIR$/../assets/old/coin.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/../assets/coin.wav" afterPath="$PROJECT_DIR$/../assets/old/coin.wav" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/../assets/dead.mp3" afterPath="$PROJECT_DIR$/../assets/old/dead.mp3" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/../assets/dead.wav" afterPath="$PROJECT_DIR$/../assets/old/dead.wav" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/../assets/dust.mp3" afterPath="$PROJECT_DIR$/../assets/old/dust.mp3" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/../assets/dust.png" afterPath="$PROJECT_DIR$/../assets/old/dust.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/../assets/dust.wav" afterPath="$PROJECT_DIR$/../assets/old/dust.wav" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/../assets/enemy.png" afterPath="$PROJECT_DIR$/../assets/old/enemy.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/../assets/exp.png" afterPath="$PROJECT_DIR$/../assets/old/exp.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/../assets/ground.png" afterPath="$PROJECT_DIR$/../assets/old/ground.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/../assets/jump.mp3" afterPath="$PROJECT_DIR$/../assets/old/jump.mp3" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/../assets/jump.png" afterPath="$PROJECT_DIR$/../assets/old/jump.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/../assets/jump.wav" afterPath="$PROJECT_DIR$/../assets/old/jump.wav" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/../assets/left.png" afterPath="$PROJECT_DIR$/../assets/old/left.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/../assets/player.png" afterPath="$PROJECT_DIR$/../assets/old/player.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/../assets/right.png" afterPath="$PROJECT_DIR$/../assets/old/right.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/../assets/wall.png" afterPath="$PROJECT_DIR$/../assets/old/wall.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/../src/states/Boot.js" afterPath="$PROJECT_DIR$/../src/states/old/Boot.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/../src/states/Game.js" afterPath="$PROJECT_DIR$/../src/states/old/Game.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/../src/states/Splash.js" afterPath="$PROJECT_DIR$/../src/states/old/Splash.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../.idea/workspace.xml" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../src/states/Game.js" afterPath="$PROJECT_DIR$/../src/states/Game.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../src/config.js" afterPath="$PROJECT_DIR$/../src/config.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../src/main.js" afterPath="$PROJECT_DIR$/../src/main.js" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -16,24 +46,55 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="boom.png" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../assets/boom.png">
+      <file leaf-file-name="Nivell1.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../src/states/Nivell1.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="360">
+              <caret line="20" column="63" lean-forward="false" selection-start-line="20" selection-start-column="63" selection-end-line="20" selection-end-column="63" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="terrain_atlas.png" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../assets/tilemaps/terrain_atlas.png">
           <provider selected="true" editor-type-id="images">
             <state />
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Game.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/../src/states/Game.js">
+      <file leaf-file-name="map.png" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../assets/tilemaps/map.png">
+          <provider selected="true" editor-type-id="images">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="tiles.png" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../assets/images/tiles.png">
+          <provider selected="true" editor-type-id="images">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Menu.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/../src/states/Menu.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="421">
-              <caret line="158" column="6" lean-forward="false" selection-start-line="158" selection-start-column="6" selection-end-line="158" selection-end-column="6" />
+            <state relative-caret-position="483">
+              <caret line="35" column="34" lean-forward="true" selection-start-line="35" selection-start-column="34" selection-end-line="35" selection-end-column="34" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
     </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+      </list>
+    </option>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
@@ -42,6 +103,8 @@
       <find>sheet</find>
       <find>anchor</find>
       <find>anch</find>
+      <find>left</find>
+      <find>physi</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -50,11 +113,21 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/../../src/main.js" />
-        <option value="$PROJECT_DIR$/../../src/states/Boot.js" />
-        <option value="$PROJECT_DIR$/../../index.html" />
-        <option value="$PROJECT_DIR$/../../src/states/Game.js" />
-        <option value="$PROJECT_DIR$/../src/states/Game.js" />
+        <option value="$USER_HOME$/src/main.js" />
+        <option value="$USER_HOME$/src/states/Boot.js" />
+        <option value="$USER_HOME$/index.html" />
+        <option value="$USER_HOME$/src/states/Game.js" />
+        <option value="/src/states/Game.js" />
+        <option value="$USER_HOME$/src/sprites/Player.js" />
+        <option value="$USER_HOME$/src/states/Game.js" />
+        <option value="$USER_HOME$/src/states/Game.js" />
+        <option value="$USER_HOME$/src/config.js" />
+        <option value="$USER_HOME$/assets/tilemaps/level1.json" />
+        <option value="$USER_HOME$/src/states/Menu.js" />
+        <option value="$USER_HOME$/src/main.js" />
+        <option value="$USER_HOME$/src/states/Nivell1.js" />
+        <option value="$PROJECT_DIR$/../../src/states/Nivell1.js" />
+        <option value="$PROJECT_DIR$/../src/states/Nivell1.js" />
       </list>
     </option>
   </component>
@@ -66,6 +139,7 @@
   </component>
   <component name="NodeModulesDirectoryManager">
     <handled-path value="$PROJECT_DIR$/../node_modules" />
+    <handled-path value="$USER_HOME$/node_modules" />
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
@@ -90,7 +164,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
@@ -146,11 +219,11 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
+              <option name="myItemId" value="assets" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="sprites" />
+              <option name="myItemId" value="tilemaps" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -168,8 +241,27 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="." />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="my-phaser-game" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="assets" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="images" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -177,16 +269,22 @@
     <property name="nodejs_interpreter_path" value="$USER_HOME$/node-v6.10.2-linux-x64/bin/node" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.detected.package.eslint" value="true" />
-    <property name="node.js.selected.package.eslint" value="$PROJECT_DIR$/../../node_modules/eslint" />
+    <property name="node.js.selected.package.eslint" value="$USER_HOME$/node_modules/eslint" />
     <property name="standardjs.codestyle.accepted" value="true" />
     <property name="node.js.path.for.package.standard" value="project" />
     <property name="node.js.detected.package.standard" value="true" />
-    <property name="node.js.selected.package.standard" value="$PROJECT_DIR$/../../node_modules/eslint" />
+    <property name="node.js.selected.package.standard" value="$USER_HOME$/node_modules/eslint" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/../assets" />
-      <recent name="$PROJECT_DIR$/../../assets" />
+      <recent name="$PROJECT_DIR$/../../assets/tilemaps" />
+      <recent name="/assets" />
+      <recent name="$USER_HOME$/assets" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/../../assets/images" />
+      <recent name="$USER_HOME$/assets/old" />
+      <recent name="$USER_HOME$/src/states/old" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -282,16 +380,20 @@
       <updated>1493991856754</updated>
       <workItem from="1493991865646" duration="9872000" />
       <workItem from="1494231867714" duration="3180000" />
-      <workItem from="1494347629052" duration="2034000" />
+      <workItem from="1494347629052" duration="2608000" />
+      <workItem from="1494350436723" duration="2051000" />
+      <workItem from="1495041729793" duration="1196000" />
+      <workItem from="1495472291629" duration="2097000" />
+      <workItem from="1495556217887" duration="1914000" />
+      <workItem from="1495560357689" duration="1157000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="15086000" />
+    <option name="totallyTimeSpent" value="24075000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="64" y="-11" width="1377" height="912" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24872728" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -323,7 +425,7 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/../../src/states/Game.js</url>
+          <url>file://$USER_HOME$/src/states/Game.js</url>
           <line>1</line>
         </line-breakpoint>
       </breakpoints>
@@ -332,29 +434,76 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/../../src/states/Game.js" />
-    <entry file="file://$PROJECT_DIR$/../../assets/player.png" />
-    <entry file="file://$PROJECT_DIR$/../../src/states/Boot.js" />
-    <entry file="file://$PROJECT_DIR$/../../src/main.js" />
-    <entry file="file://$PROJECT_DIR$/../../src/config.js" />
-    <entry file="file://$PROJECT_DIR$/../../assets/player.png" />
-    <entry file="file://$PROJECT_DIR$/../../index.html" />
-    <entry file="file://$PROJECT_DIR$/../../assets/ground.png" />
-    <entry file="file://$PROJECT_DIR$/../../src/main.js" />
-    <entry file="file://$PROJECT_DIR$/../../assets/wall.png" />
-    <entry file="file://$PROJECT_DIR$/../../src/states/Boot.js" />
-    <entry file="file://$PROJECT_DIR$/../../src/config.js" />
-    <entry file="file://$PROJECT_DIR$/../../assets/dust.png" />
-    <entry file="file://$PROJECT_DIR$/../../src/states/Game.js" />
-    <entry file="file://$PROJECT_DIR$/../assets/boom.png">
+    <entry file="file://$USER_HOME$/src/states/Game.js" />
+    <entry file="file://$USER_HOME$/assets/player.png" />
+    <entry file="file://$USER_HOME$/src/states/Boot.js" />
+    <entry file="file://$USER_HOME$/src/main.js" />
+    <entry file="file://$USER_HOME$/src/config.js" />
+    <entry file="file://$USER_HOME$/assets/player.png" />
+    <entry file="file://$USER_HOME$/index.html" />
+    <entry file="file://$USER_HOME$/assets/ground.png" />
+    <entry file="file://$USER_HOME$/src/main.js" />
+    <entry file="file://$USER_HOME$/assets/wall.png" />
+    <entry file="file://$USER_HOME$/src/states/Boot.js" />
+    <entry file="file://$USER_HOME$/src/config.js" />
+    <entry file="file://$USER_HOME$/assets/dust.png" />
+    <entry file="file://$USER_HOME$/src/states/Game.js" />
+    <entry file="file:///assets/boom.png" />
+    <entry file="file:///src/states/Game.js" />
+    <entry file="file://$USER_HOME$/src/sprites/Player.js" />
+    <entry file="file://$USER_HOME$/src/states/Game.js" />
+    <entry file="file://$USER_HOME$/src/utils.js" />
+    <entry file="file://$USER_HOME$/src/states/old/Boot.js" />
+    <entry file="file://$USER_HOME$/src/config.js" />
+    <entry file="file://$USER_HOME$/src/states/old/Splash.js" />
+    <entry file="file://$USER_HOME$/src/states/old/Game.js" />
+    <entry file="file://$USER_HOME$/assets/tilemaps/level1.png" />
+    <entry file="file://$USER_HOME$/assets/tilemaps/level1.json" />
+    <entry file="file://$USER_HOME$/assets/tilemaps/level1.tmx" />
+    <entry file="file://$USER_HOME$/src/states/Menu.js" />
+    <entry file="file://$USER_HOME$/src/main.js" />
+    <entry file="file://$USER_HOME$/src/states/Nivell1.js" />
+    <entry file="file://$PROJECT_DIR$/../../assets/tilemaps/Multi_Platformer_Tileset_Free/GrassLand/GrassLand_Example.png" />
+    <entry file="file://$PROJECT_DIR$/../../assets/tilemaps/Multi_Platformer_Tileset_Free/GrassLand/Details/Animated/GrassLand_Butterfly.png" />
+    <entry file="file://$PROJECT_DIR$/../../assets/tilemaps/Multi_Platformer_Tileset_Free/GrassLand/Details/Animated/GrassLand_WaterBubbles.png" />
+    <entry file="file://$PROJECT_DIR$/../../assets/tilemaps/Multi_Platformer_Tileset_Free/GrassLand/Terrain/Grassland_Terrain_Tileset.png" />
+    <entry file="file://$PROJECT_DIR$/../../assets/tilemaps/Multi_Platformer_Tileset_Free/GrassLand/Background/GrassLand_Background_1.png" />
+    <entry file="file://$PROJECT_DIR$/../../assets/tilemaps/nivell1.json" />
+    <entry file="file://$PROJECT_DIR$/../../assets/tilemaps/nivell1.tmx" />
+    <entry file="file://$PROJECT_DIR$/../../assets/tilemaps/level1.json" />
+    <entry file="file://$PROJECT_DIR$/../../src/states/Nivell1.js" />
+    <entry file="file://$PROJECT_DIR$/../assets/tilemaps/map.png">
       <provider selected="true" editor-type-id="images">
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../src/states/Game.js">
+    <entry file="file://$PROJECT_DIR$/../assets/tilemaps/level1.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../assets/images/tiles.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../assets/tilemaps/terrain_atlas.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../src/states/Nivell1.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="421">
-          <caret line="158" column="6" lean-forward="false" selection-start-line="158" selection-start-column="6" selection-end-line="158" selection-end-column="6" />
+        <state relative-caret-position="360">
+          <caret line="20" column="63" lean-forward="false" selection-start-line="20" selection-start-column="63" selection-end-line="20" selection-end-column="63" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../src/states/Menu.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="483">
+          <caret line="35" column="34" lean-forward="true" selection-start-line="35" selection-start-column="34" selection-end-line="35" selection-end-column="34" />
           <folding />
         </state>
       </provider>
