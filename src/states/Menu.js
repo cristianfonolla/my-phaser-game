@@ -13,8 +13,8 @@ export default class extends Phaser.State {
 
   setTitle() {
 
-    this.titleText = game.add.text(game.camera.width / 2, 100, "Platform Game Cristian Fonolla!", {
-      font: 'bold 60pt Arial',
+    this.titleText = game.add.text(game.camera.width / 2, 100, "Game Cristian Fonolla!", {
+      font: 'bold 58pt Arial',
       fill: 'red',
       align: 'center'
     });
