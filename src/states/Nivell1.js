@@ -9,7 +9,7 @@ export default class extends Phaser.State {
     this.game.load.image('tiles', '/assets/tilemaps/terrain_atlas.png');
     this.game.load.spritesheet('player', '/assets/images/player.png', 28, 22)
     this.game.load.audio('jump', '/assets/sounds/jump.wav')
-    this.game.load.audio('dungeon', '/assets/sounds/dsound.mp3')
+    this.game.load.audio('dungeon', '/assets/sounds/dsound.mp3',true)
 
   }
 
@@ -27,6 +27,7 @@ export default class extends Phaser.State {
     this.map.addTilesetImage('tiles', 'tiles');
     this.jumpSound = this.game.add.audio('jump')
     this.dsound = this.game.add.audio('dungeon')
+    this.dsound.loop = true
     this.dsound.play()
 
     this.terrainLayer = this.map.createLayer('MyTerrain1');
