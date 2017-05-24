@@ -2,39 +2,70 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="14de83c0-f7da-402b-bb9a-49b3d5ea22ff" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../assets/images/tiles.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../assets/tilemaps/level1.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../assets/tilemaps/level1.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../assets/tilemaps/level1.tmx" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../src/sprites/Player.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../src/states/Menu.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../src/states/Nivell1.js" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../src/sprites/Mushroom.js" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/../assets/boom.png" afterPath="$PROJECT_DIR$/../assets/old/boom.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/../assets/coin.mp3" afterPath="$PROJECT_DIR$/../assets/old/coin.mp3" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/../assets/coin.png" afterPath="$PROJECT_DIR$/../assets/old/coin.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/../assets/coin.wav" afterPath="$PROJECT_DIR$/../assets/old/coin.wav" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/../assets/dead.mp3" afterPath="$PROJECT_DIR$/../assets/old/dead.mp3" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/../assets/dead.wav" afterPath="$PROJECT_DIR$/../assets/old/dead.wav" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/../assets/dust.mp3" afterPath="$PROJECT_DIR$/../assets/old/dust.mp3" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/../assets/dust.png" afterPath="$PROJECT_DIR$/../assets/old/dust.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/../assets/dust.wav" afterPath="$PROJECT_DIR$/../assets/old/dust.wav" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/../assets/enemy.png" afterPath="$PROJECT_DIR$/../assets/old/enemy.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/../assets/exp.png" afterPath="$PROJECT_DIR$/../assets/old/exp.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/../assets/ground.png" afterPath="$PROJECT_DIR$/../assets/old/ground.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/../assets/jump.mp3" afterPath="$PROJECT_DIR$/../assets/old/jump.mp3" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/../assets/jump.png" afterPath="$PROJECT_DIR$/../assets/old/jump.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/../assets/jump.wav" afterPath="$PROJECT_DIR$/../assets/old/jump.wav" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/../assets/left.png" afterPath="$PROJECT_DIR$/../assets/old/left.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/../assets/player.png" afterPath="$PROJECT_DIR$/../assets/old/player.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/../assets/right.png" afterPath="$PROJECT_DIR$/../assets/old/right.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/../assets/wall.png" afterPath="$PROJECT_DIR$/../assets/old/wall.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/../src/states/Boot.js" afterPath="$PROJECT_DIR$/../src/states/old/Boot.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/../src/states/Game.js" afterPath="$PROJECT_DIR$/../src/states/old/Game.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/../src/states/Splash.js" afterPath="$PROJECT_DIR$/../src/states/old/Splash.js" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../assets/images/loader-bar.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../assets/images/loader-bg.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../assets/images/mushroom2.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../assets/images/phaser-es6-webpack.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../assets/images/tiles.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../assets/old/boom.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../assets/old/coin.mp3" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../assets/old/coin.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../assets/old/coin.wav" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../assets/old/dead.mp3" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../assets/old/dead.wav" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../assets/old/dust.mp3" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../assets/old/dust.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../assets/old/dust.wav" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../assets/old/enemy.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../assets/old/exp.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../assets/old/ground.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../assets/old/jump.mp3" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../assets/old/jump.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../assets/old/jump.wav" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../assets/old/left.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../assets/old/player.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../assets/old/right.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../assets/old/wall.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../assets/tilemaps/Multi_Platformer_Tileset_Free/GrassLand/Background/GrassLand_Background_1.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../assets/tilemaps/Multi_Platformer_Tileset_Free/GrassLand/Background/GrassLand_Background_2.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../assets/tilemaps/Multi_Platformer_Tileset_Free/GrassLand/Background/GrassLand_Background_3.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../assets/tilemaps/Multi_Platformer_Tileset_Free/GrassLand/Background/GrassLand_Background_4.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../assets/tilemaps/Multi_Platformer_Tileset_Free/GrassLand/Background/GrassLand_Cloud_1.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../assets/tilemaps/Multi_Platformer_Tileset_Free/GrassLand/Background/GrassLand_Cloud_2.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../assets/tilemaps/Multi_Platformer_Tileset_Free/GrassLand/Details/Animated/GrassLand_Butterfly.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../assets/tilemaps/Multi_Platformer_Tileset_Free/GrassLand/Details/Animated/GrassLand_WaterBubbles.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../assets/tilemaps/Multi_Platformer_Tileset_Free/GrassLand/Details/Animated/GrassLand_WaterSurfaceAnim.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../assets/tilemaps/Multi_Platformer_Tileset_Free/GrassLand/Details/GrassLand_Bush.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../assets/tilemaps/Multi_Platformer_Tileset_Free/GrassLand/Details/GrassLand_Chopped_Tree.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../assets/tilemaps/Multi_Platformer_Tileset_Free/GrassLand/Details/GrassLand_Entry_1.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../assets/tilemaps/Multi_Platformer_Tileset_Free/GrassLand/Details/GrassLand_Entry_2.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../assets/tilemaps/Multi_Platformer_Tileset_Free/GrassLand/Details/GrassLand_Entry_3.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../assets/tilemaps/Multi_Platformer_Tileset_Free/GrassLand/Details/GrassLand_Entry_4.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../assets/tilemaps/Multi_Platformer_Tileset_Free/GrassLand/Details/GrassLand_Flower.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../assets/tilemaps/Multi_Platformer_Tileset_Free/GrassLand/Details/GrassLand_Grass_1.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../assets/tilemaps/Multi_Platformer_Tileset_Free/GrassLand/Details/GrassLand_Grass_2.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../assets/tilemaps/Multi_Platformer_Tileset_Free/GrassLand/Details/GrassLand_Grass_3.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../assets/tilemaps/Multi_Platformer_Tileset_Free/GrassLand/Details/GrassLand_Grass_4.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../assets/tilemaps/Multi_Platformer_Tileset_Free/GrassLand/Details/GrassLand_Stone_1.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../assets/tilemaps/Multi_Platformer_Tileset_Free/GrassLand/Details/GrassLand_Stone_2.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../assets/tilemaps/Multi_Platformer_Tileset_Free/GrassLand/Details/GrassLand_Stone_3.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../assets/tilemaps/Multi_Platformer_Tileset_Free/GrassLand/Details/GrassLand_Tree.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../assets/tilemaps/Multi_Platformer_Tileset_Free/GrassLand/Details/GrassLand_Trunk.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../assets/tilemaps/Multi_Platformer_Tileset_Free/GrassLand/GrassLand_Example.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../assets/tilemaps/Multi_Platformer_Tileset_Free/GrassLand/Terrain/Grassland_Terrain_Tileset.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../assets/tilemaps/Multi_Platformer_Tileset_Free/ReadMe.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../assets/tilemaps/level1.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../assets/tilemaps/level1.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../assets/tilemaps/level1.tmx" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../assets/tilemaps/map.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../assets/tilemaps/myterrain.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../src/states/old/Boot.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../src/states/old/Game.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../src/states/old/Splash.js" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../.idea/workspace.xml" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../src/config.js" afterPath="$PROJECT_DIR$/../src/config.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../src/main.js" afterPath="$PROJECT_DIR$/../src/main.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../src/states/Nivell1.js" afterPath="$PROJECT_DIR$/../src/states/Nivell1.js" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -49,41 +80,39 @@
       <file leaf-file-name="Nivell1.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../src/states/Nivell1.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="20" column="63" lean-forward="false" selection-start-line="20" selection-start-column="63" selection-end-line="20" selection-end-column="63" />
+            <state relative-caret-position="126">
+              <caret line="7" column="69" lean-forward="false" selection-start-line="7" selection-start-column="69" selection-end-line="7" selection-end-column="69" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="terrain_atlas.png" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../assets/tilemaps/terrain_atlas.png">
-          <provider selected="true" editor-type-id="images">
-            <state />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="map.png" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../assets/tilemaps/map.png">
-          <provider selected="true" editor-type-id="images">
-            <state />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="tiles.png" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../assets/images/tiles.png">
-          <provider selected="true" editor-type-id="images">
-            <state />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Menu.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/../src/states/Menu.js">
+      <file leaf-file-name="main.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../src/main.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="483">
-              <caret line="35" column="34" lean-forward="true" selection-start-line="35" selection-start-column="34" selection-end-line="35" selection-end-column="34" />
+            <state relative-caret-position="432">
+              <caret line="24" column="29" lean-forward="false" selection-start-line="24" selection-start-column="29" selection-end-line="24" selection-end-column="29" />
+              <folding>
+                <element signature="e#0#13#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="config.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/../src/config.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="18">
+              <caret line="1" column="16" lean-forward="false" selection-start-line="1" selection-start-column="16" selection-end-line="1" selection-end-column="16" />
               <folding />
             </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Captura de pantalla de 2017-05-24 17-10-21.png" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../assets/images/Captura de pantalla de 2017-05-24 17-10-21.png">
+          <provider selected="true" editor-type-id="images">
+            <state />
           </provider>
         </entry>
       </file>
@@ -126,8 +155,11 @@
         <option value="$USER_HOME$/src/states/Menu.js" />
         <option value="$USER_HOME$/src/main.js" />
         <option value="$USER_HOME$/src/states/Nivell1.js" />
-        <option value="$PROJECT_DIR$/../../src/states/Nivell1.js" />
+        <option value="$USER_HOME$/src/states/Nivell1.js" />
+        <option value="$USER_HOME$/src/states/Nivell1.js" />
         <option value="$PROJECT_DIR$/../src/states/Nivell1.js" />
+        <option value="$PROJECT_DIR$/../src/main.js" />
+        <option value="$PROJECT_DIR$/../src/config.js" />
       </list>
     </option>
   </component>
@@ -164,7 +196,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -219,11 +250,11 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="assets" />
+              <option name="myItemId" value="src" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="tilemaps" />
+              <option name="myItemId" value="sprites" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -238,6 +269,10 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="assets" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tilemaps" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -262,6 +297,7 @@
         </subPane>
       </pane>
       <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -277,12 +313,12 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/../../assets/tilemaps" />
+      <recent name="$USER_HOME$/assets/tilemaps" />
       <recent name="/assets" />
       <recent name="$USER_HOME$/assets" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/../../assets/images" />
+      <recent name="$USER_HOME$/assets/images" />
       <recent name="$USER_HOME$/assets/old" />
       <recent name="$USER_HOME$/src/states/old" />
     </key>
@@ -386,14 +422,17 @@
       <workItem from="1495472291629" duration="2097000" />
       <workItem from="1495556217887" duration="1914000" />
       <workItem from="1495560357689" duration="1157000" />
+      <workItem from="1495564622360" duration="1839000" />
+      <workItem from="1495637640116" duration="1040000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="24075000" />
+    <option name="totallyTimeSpent" value="26954000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="64" y="-11" width="1377" height="912" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24872728" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -435,19 +474,6 @@
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$USER_HOME$/src/states/Game.js" />
-    <entry file="file://$USER_HOME$/assets/player.png" />
-    <entry file="file://$USER_HOME$/src/states/Boot.js" />
-    <entry file="file://$USER_HOME$/src/main.js" />
-    <entry file="file://$USER_HOME$/src/config.js" />
-    <entry file="file://$USER_HOME$/assets/player.png" />
-    <entry file="file://$USER_HOME$/index.html" />
-    <entry file="file://$USER_HOME$/assets/ground.png" />
-    <entry file="file://$USER_HOME$/src/main.js" />
-    <entry file="file://$USER_HOME$/assets/wall.png" />
-    <entry file="file://$USER_HOME$/src/states/Boot.js" />
-    <entry file="file://$USER_HOME$/src/config.js" />
-    <entry file="file://$USER_HOME$/assets/dust.png" />
-    <entry file="file://$USER_HOME$/src/states/Game.js" />
     <entry file="file:///assets/boom.png" />
     <entry file="file:///src/states/Game.js" />
     <entry file="file://$USER_HOME$/src/sprites/Player.js" />
@@ -463,26 +489,39 @@
     <entry file="file://$USER_HOME$/src/states/Menu.js" />
     <entry file="file://$USER_HOME$/src/main.js" />
     <entry file="file://$USER_HOME$/src/states/Nivell1.js" />
-    <entry file="file://$PROJECT_DIR$/../../assets/tilemaps/Multi_Platformer_Tileset_Free/GrassLand/GrassLand_Example.png" />
-    <entry file="file://$PROJECT_DIR$/../../assets/tilemaps/Multi_Platformer_Tileset_Free/GrassLand/Details/Animated/GrassLand_Butterfly.png" />
-    <entry file="file://$PROJECT_DIR$/../../assets/tilemaps/Multi_Platformer_Tileset_Free/GrassLand/Details/Animated/GrassLand_WaterBubbles.png" />
-    <entry file="file://$PROJECT_DIR$/../../assets/tilemaps/Multi_Platformer_Tileset_Free/GrassLand/Terrain/Grassland_Terrain_Tileset.png" />
-    <entry file="file://$PROJECT_DIR$/../../assets/tilemaps/Multi_Platformer_Tileset_Free/GrassLand/Background/GrassLand_Background_1.png" />
-    <entry file="file://$PROJECT_DIR$/../../assets/tilemaps/nivell1.json" />
-    <entry file="file://$PROJECT_DIR$/../../assets/tilemaps/nivell1.tmx" />
-    <entry file="file://$PROJECT_DIR$/../../assets/tilemaps/level1.json" />
-    <entry file="file://$PROJECT_DIR$/../../src/states/Nivell1.js" />
-    <entry file="file://$PROJECT_DIR$/../assets/tilemaps/map.png">
+    <entry file="file://$USER_HOME$/assets/tilemaps/Multi_Platformer_Tileset_Free/GrassLand/GrassLand_Example.png" />
+    <entry file="file://$USER_HOME$/assets/tilemaps/Multi_Platformer_Tileset_Free/GrassLand/Details/Animated/GrassLand_Butterfly.png" />
+    <entry file="file://$USER_HOME$/assets/tilemaps/Multi_Platformer_Tileset_Free/GrassLand/Details/Animated/GrassLand_WaterBubbles.png" />
+    <entry file="file://$USER_HOME$/assets/tilemaps/Multi_Platformer_Tileset_Free/GrassLand/Terrain/Grassland_Terrain_Tileset.png" />
+    <entry file="file://$USER_HOME$/assets/tilemaps/Multi_Platformer_Tileset_Free/GrassLand/Background/GrassLand_Background_1.png" />
+    <entry file="file://$USER_HOME$/assets/tilemaps/nivell1.json" />
+    <entry file="file://$USER_HOME$/assets/tilemaps/nivell1.tmx" />
+    <entry file="file://$USER_HOME$/assets/tilemaps/level1.json" />
+    <entry file="file://$USER_HOME$/src/states/Nivell1.js" />
+    <entry file="file://$USER_HOME$/assets/tilemaps/map.png" />
+    <entry file="file://$USER_HOME$/assets/tilemaps/level1.png" />
+    <entry file="file://$USER_HOME$/assets/images/tiles.png" />
+    <entry file="file://$USER_HOME$/assets/tilemaps/terrain_atlas.png" />
+    <entry file="file://$USER_HOME$/src/states/Nivell1.js" />
+    <entry file="file://$USER_HOME$/src/states/Menu.js" />
+    <entry file="file://$PROJECT_DIR$/../../src/states/Menu.js" />
+    <entry file="file://$PROJECT_DIR$/../../src/main.js" />
+    <entry file="file://$PROJECT_DIR$/../../assets/images/tiles.png" />
+    <entry file="file://$PROJECT_DIR$/../../assets/tilemaps/Items/bombFlash.png" />
+    <entry file="file://$PROJECT_DIR$/../../assets/tilemaps/HUD/hud_0.png" />
+    <entry file="file://$PROJECT_DIR$/../../assets/tilemaps/HUD/hud_5.png" />
+    <entry file="file://$PROJECT_DIR$/../../assets/tilemaps/HUD/hud_7.png" />
+    <entry file="file://$PROJECT_DIR$/../../assets/tilemaps/Tiles/boxCoin.png" />
+    <entry file="file://$PROJECT_DIR$/../../assets/tilemaps/Tiles/boxCoinAlt_disabled.png" />
+    <entry file="file://$PROJECT_DIR$/../../assets/tilemaps/Tiles/dirtCliffRightAlt.png" />
+    <entry file="file://$PROJECT_DIR$/../../assets/tilemaps/Tiles/grassHillRight.png" />
+    <entry file="file://$PROJECT_DIR$/../../assets/tilemaps/preview.png" />
+    <entry file="file://$PROJECT_DIR$/../assets/tilemaps/bg_castle.png">
       <provider selected="true" editor-type-id="images">
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../assets/tilemaps/level1.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../assets/images/tiles.png">
+    <entry file="file://$PROJECT_DIR$/../assets/tilemaps/bg.png">
       <provider selected="true" editor-type-id="images">
         <state />
       </provider>
@@ -492,18 +531,41 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../src/states/Nivell1.js">
+    <entry file="file://$PROJECT_DIR$/../assets/tilemaps/myterrain.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="20" column="63" lean-forward="false" selection-start-line="20" selection-start-column="63" selection-end-line="20" selection-end-column="63" />
+        <state relative-caret-position="270">
+          <caret line="12" column="14" lean-forward="true" selection-start-line="12" selection-start-column="14" selection-end-line="12" selection-end-column="14" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../src/states/Menu.js">
+    <entry file="file://$PROJECT_DIR$/../src/states/Nivell1.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="483">
-          <caret line="35" column="34" lean-forward="true" selection-start-line="35" selection-start-column="34" selection-end-line="35" selection-end-column="34" />
+        <state relative-caret-position="126">
+          <caret line="7" column="69" lean-forward="false" selection-start-line="7" selection-start-column="69" selection-end-line="7" selection-end-column="69" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../src/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="432">
+          <caret line="24" column="29" lean-forward="false" selection-start-line="24" selection-start-column="29" selection-end-line="24" selection-end-column="29" />
+          <folding>
+            <element signature="e#0#13#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../assets/images/Captura de pantalla de 2017-05-24 17-10-21.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../src/config.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="18">
+          <caret line="1" column="16" lean-forward="false" selection-start-line="1" selection-start-column="16" selection-end-line="1" selection-end-column="16" />
           <folding />
         </state>
       </provider>

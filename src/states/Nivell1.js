@@ -14,13 +14,12 @@ export default class extends Phaser.State {
     this.map = this.game.add.tilemap('tilemap');
     this.map.addTilesetImage('tiles', 'tiles');
 
-    this.layer = this.map.createLayer('MyTerrain');
+    this.layer = this.map.createLayer('MyTerrain1');
     this.layer.resizeWorld();
     this.layer.wrap = true;
 
     this.cursors = this.game.input.keyboard.createCursorKeys();
 
   }
-
 
 }
