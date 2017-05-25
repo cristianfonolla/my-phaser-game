@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="14de83c0-f7da-402b-bb9a-49b3d5ea22ff" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../assets/images/browndoor.png" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../.idea/workspace.xml" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../src/main.js" afterPath="$PROJECT_DIR$/../src/main.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../assets/tilemaps/myterrain.json" afterPath="$PROJECT_DIR$/../assets/tilemaps/myterrain.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../src/states/Menu.js" afterPath="$PROJECT_DIR$/../src/states/Menu.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../src/states/Nivell1.js" afterPath="$PROJECT_DIR$/../src/states/Nivell1.js" />
     </list>
@@ -17,11 +18,11 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Nivell1.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Nivell1.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../src/states/Nivell1.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="271">
-              <caret line="62" column="4" lean-forward="false" selection-start-line="62" selection-start-column="4" selection-end-line="62" selection-end-column="4" />
+            <state relative-caret-position="324">
+              <caret line="42" column="6" lean-forward="false" selection-start-line="42" selection-start-column="6" selection-end-line="42" selection-end-column="6" />
               <folding>
                 <element signature="e#0#27#0" expanded="true" />
               </folding>
@@ -36,31 +37,38 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="myterrain.json" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../assets/tilemaps/myterrain.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-420">
+              <caret line="54" column="34" lean-forward="true" selection-start-line="54" selection-start-column="34" selection-end-line="54" selection-end-column="34" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="browndoor.png" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../assets/images/browndoor.png">
+          <provider selected="true" editor-type-id="images">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Menu.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/../src/states/Menu.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="504">
+              <caret line="67" column="22" lean-forward="false" selection-start-line="67" selection-start-column="22" selection-end-line="67" selection-end-column="22" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="config.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../src/config.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Menu.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../src/states/Menu.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="378">
-              <caret line="21" column="0" lean-forward="false" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Player.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../src/sprites/Player.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="216">
-              <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -69,9 +77,11 @@
       <file leaf-file-name="main.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../src/main.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="288">
-              <caret line="24" column="26" lean-forward="false" selection-start-line="24" selection-start-column="26" selection-end-line="24" selection-end-column="26" />
-              <folding />
+            <state relative-caret-position="378">
+              <caret line="21" column="44" lean-forward="true" selection-start-line="21" selection-start-column="44" selection-end-line="21" selection-end-column="44" />
+              <folding>
+                <element signature="e#0#13#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -96,6 +106,10 @@
       <find>physi</find>
       <find>ph</find>
       <find>collide</find>
+      <find>inputs</find>
+      <find>colisionable</find>
+      <find>object</find>
+      <find>item</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -119,12 +133,14 @@
         <option value="$USER_HOME$/src/states/Nivell1.js" />
         <option value="$USER_HOME$/src/states/Nivell1.js" />
         <option value="$USER_HOME$/src/states/Nivell1.js" />
-        <option value="$PROJECT_DIR$/../src/config.js" />
-        <option value="$PROJECT_DIR$/../assets/tilemaps/myterrain.json" />
-        <option value="$PROJECT_DIR$/../src/sprites/Player.js" />
-        <option value="$PROJECT_DIR$/../src/main.js" />
-        <option value="$PROJECT_DIR$/../src/states/Menu.js" />
+        <option value="$PROJECT_DIR$/../../src/config.js" />
+        <option value="$PROJECT_DIR$/../../assets/tilemaps/myterrain.json" />
+        <option value="$PROJECT_DIR$/../../src/sprites/Player.js" />
+        <option value="$PROJECT_DIR$/../../src/main.js" />
+        <option value="$PROJECT_DIR$/../../src/states/Menu.js" />
+        <option value="$PROJECT_DIR$/../../src/states/Nivell1.js" />
         <option value="$PROJECT_DIR$/../src/states/Nivell1.js" />
+        <option value="$PROJECT_DIR$/../src/states/Menu.js" />
       </list>
     </option>
   </component>
@@ -161,6 +177,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -279,8 +297,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -295,17 +311,18 @@
     <property name="node.js.selected.package.standard" value="$USER_HOME$/node_modules/eslint" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/../assets/sounds" />
-      <recent name="$USER_HOME$/assets/images" />
-      <recent name="$USER_HOME$/assets/old" />
-      <recent name="$USER_HOME$/src/states/old" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/../assets/images" />
+      <recent name="$PROJECT_DIR$/../../assets/images" />
       <recent name="$USER_HOME$/assets/tilemaps" />
       <recent name="/assets" />
       <recent name="$USER_HOME$/assets" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/../../assets/sounds" />
+      <recent name="$USER_HOME$/assets/images" />
+      <recent name="$USER_HOME$/assets/old" />
+      <recent name="$USER_HOME$/src/states/old" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -409,16 +426,18 @@
       <workItem from="1495560357689" duration="1157000" />
       <workItem from="1495564622360" duration="1839000" />
       <workItem from="1495637640116" duration="13207000" />
+      <workItem from="1495723004084" duration="10103000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="39121000" />
+    <option name="totallyTimeSpent" value="49224000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="64" y="-11" width="1377" height="912" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24872728" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24872728" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -457,14 +476,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$USER_HOME$/src/sprites/Player.js" />
-    <entry file="file://$USER_HOME$/src/states/Game.js" />
-    <entry file="file://$USER_HOME$/src/utils.js" />
-    <entry file="file://$USER_HOME$/src/states/old/Boot.js" />
-    <entry file="file://$USER_HOME$/src/config.js" />
-    <entry file="file://$USER_HOME$/src/states/old/Splash.js" />
-    <entry file="file://$USER_HOME$/src/states/old/Game.js" />
-    <entry file="file://$USER_HOME$/assets/tilemaps/level1.png" />
     <entry file="file://$USER_HOME$/assets/tilemaps/level1.json" />
     <entry file="file://$USER_HOME$/assets/tilemaps/level1.tmx" />
     <entry file="file://$USER_HOME$/src/states/Menu.js" />
@@ -485,51 +496,54 @@
     <entry file="file://$USER_HOME$/assets/tilemaps/terrain_atlas.png" />
     <entry file="file://$USER_HOME$/src/states/Nivell1.js" />
     <entry file="file://$USER_HOME$/src/states/Menu.js" />
-    <entry file="file://$PROJECT_DIR$/../../src/states/Menu.js" />
+    <entry file="file://$USER_HOME$/src/states/Menu.js" />
+    <entry file="file://$USER_HOME$/src/main.js" />
+    <entry file="file://$USER_HOME$/assets/images/tiles.png" />
+    <entry file="file://$USER_HOME$/assets/tilemaps/Items/bombFlash.png" />
+    <entry file="file://$USER_HOME$/assets/tilemaps/HUD/hud_0.png" />
+    <entry file="file://$USER_HOME$/assets/tilemaps/HUD/hud_5.png" />
+    <entry file="file://$USER_HOME$/assets/tilemaps/HUD/hud_7.png" />
+    <entry file="file://$USER_HOME$/assets/tilemaps/Tiles/boxCoin.png" />
+    <entry file="file://$USER_HOME$/assets/tilemaps/Tiles/boxCoinAlt_disabled.png" />
+    <entry file="file://$USER_HOME$/assets/tilemaps/Tiles/dirtCliffRightAlt.png" />
+    <entry file="file://$USER_HOME$/assets/tilemaps/Tiles/grassHillRight.png" />
+    <entry file="file://$USER_HOME$/assets/tilemaps/preview.png" />
+    <entry file="file://$PROJECT_DIR$/../../assets/tilemaps/bg_castle.png" />
+    <entry file="file://$PROJECT_DIR$/../../assets/tilemaps/bg.png" />
+    <entry file="file://$PROJECT_DIR$/../../assets/tilemaps/myterrain.json" />
+    <entry file="file://$PROJECT_DIR$/../../assets/images/lvl1.png" />
+    <entry file="file://$PROJECT_DIR$/../../assets/images/player.png" />
+    <entry file="file://$PROJECT_DIR$/../../src/sprites/Player.js" />
+    <entry file="file://$PROJECT_DIR$/../../assets/tilemaps/terrain_atlas.png" />
     <entry file="file://$PROJECT_DIR$/../../src/main.js" />
-    <entry file="file://$PROJECT_DIR$/../../assets/images/tiles.png" />
-    <entry file="file://$PROJECT_DIR$/../../assets/tilemaps/Items/bombFlash.png" />
-    <entry file="file://$PROJECT_DIR$/../../assets/tilemaps/HUD/hud_0.png" />
-    <entry file="file://$PROJECT_DIR$/../../assets/tilemaps/HUD/hud_5.png" />
-    <entry file="file://$PROJECT_DIR$/../../assets/tilemaps/HUD/hud_7.png" />
-    <entry file="file://$PROJECT_DIR$/../../assets/tilemaps/Tiles/boxCoin.png" />
-    <entry file="file://$PROJECT_DIR$/../../assets/tilemaps/Tiles/boxCoinAlt_disabled.png" />
-    <entry file="file://$PROJECT_DIR$/../../assets/tilemaps/Tiles/dirtCliffRightAlt.png" />
-    <entry file="file://$PROJECT_DIR$/../../assets/tilemaps/Tiles/grassHillRight.png" />
-    <entry file="file://$PROJECT_DIR$/../../assets/tilemaps/preview.png" />
-    <entry file="file://$PROJECT_DIR$/../assets/tilemaps/bg_castle.png">
+    <entry file="file://$PROJECT_DIR$/../../src/config.js" />
+    <entry file="file://$PROJECT_DIR$/../../src/states/Menu.js" />
+    <entry file="file://$PROJECT_DIR$/../../src/states/Nivell1.js" />
+    <entry file="file://$PROJECT_DIR$/../assets/images/moff.jpg">
       <provider selected="true" editor-type-id="images">
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../assets/tilemaps/bg.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../assets/tilemaps/myterrain.json">
+    <entry file="file://$PROJECT_DIR$/../src/config.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="12" column="14" lean-forward="true" selection-start-line="12" selection-start-column="14" selection-end-line="12" selection-end-column="14" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../assets/images/lvl1.png">
+    <entry file="file://$PROJECT_DIR$/../assets/images/browndoor.png">
       <provider selected="true" editor-type-id="images">
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../assets/images/player.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../src/sprites/Player.js">
+    <entry file="file://$PROJECT_DIR$/../src/main.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="378">
+          <caret line="21" column="44" lean-forward="true" selection-start-line="21" selection-start-column="44" selection-end-line="21" selection-end-column="44" />
+          <folding>
+            <element signature="e#0#13#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -538,37 +552,29 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../src/main.js">
+    <entry file="file://$PROJECT_DIR$/../assets/tilemaps/myterrain.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="24" column="26" lean-forward="false" selection-start-line="24" selection-start-column="26" selection-end-line="24" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../src/config.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../src/states/Menu.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="21" column="0" lean-forward="false" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+        <state relative-caret-position="-420">
+          <caret line="54" column="34" lean-forward="true" selection-start-line="54" selection-start-column="34" selection-end-line="54" selection-end-column="34" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../src/states/Nivell1.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="271">
-          <caret line="62" column="4" lean-forward="false" selection-start-line="62" selection-start-column="4" selection-end-line="62" selection-end-column="4" />
+        <state relative-caret-position="324">
+          <caret line="42" column="6" lean-forward="false" selection-start-line="42" selection-start-column="6" selection-end-line="42" selection-end-column="6" />
           <folding>
             <element signature="e#0#27#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../src/states/Menu.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="504">
+          <caret line="67" column="22" lean-forward="false" selection-start-line="67" selection-start-column="22" selection-end-line="67" selection-end-column="22" />
+          <folding />
         </state>
       </provider>
     </entry>
