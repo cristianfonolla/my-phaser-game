@@ -9,7 +9,7 @@ export default class extends Phaser.State {
     this.game.load.image('tiles', '/assets/tilemaps/terrain_atlas.png');
     this.game.load.spritesheet('player', '/assets/images/player.png', 28, 22)
     this.game.load.audio('jump', '/assets/sounds/jump.wav')
-    this.game.load.audio('dungeon', '/assets/sounds/dsound.mp3',true)
+    this.game.load.audio('dungeon', '/assets/sounds/dsound.mp3', true)
 
   }
 
@@ -60,8 +60,7 @@ export default class extends Phaser.State {
   }
 
   update() {
-
-
+    
 
     this.game.physics.arcade.collide(this.player, this.colLayer);
 
@@ -174,5 +173,11 @@ export default class extends Phaser.State {
 
     return isActive;
   }
+
+
+      
+
+
+
 
 }
