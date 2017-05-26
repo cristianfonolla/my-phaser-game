@@ -1,5 +1,6 @@
 import Phaser from 'phaser'
 import Player from '../sprites/Player'
+//import Nivell1 from './'
 
 export default class extends Phaser.State {
 
@@ -8,16 +9,25 @@ export default class extends Phaser.State {
     this.game.load.tilemap('tilemap', '/assets/tilemaps/myterrain.json', null, Phaser.Tilemap.TILED_JSON);
     this.game.load.image('tiles', '/assets/tilemaps/terrain_atlas.png');
     this.game.load.image('browndoor', '/assets/images/browndoor.png');
-    this.game.load.spritesheet('player', '/assets/images/player.png', 28, 22)
-    this.game.load.audio('jump', '/assets/sounds/jump.wav')
+    this.game.load.image('mushroom', '/assets/images/mushroom.png');
+    this.game.load.image('php', '/assets/images/php.png');
+    this.game.load.image('exp', '/assets/images/exp.png');
+    this.game.load.image('3hearts', '/assets/images/3hearts.png');
+    this.game.load.image('2hearts', '/assets/images/2hearts.png');
+    this.game.load.image('1hearts', '/assets/images/1hearts.png');
+    this.game.load.spritesheet('player', '/assets/images/player.png', 28, 22);
+    this.game.load.audio('jump', '/assets/sounds/jump.wav');
+    this.game.load.audio('takeMushroom', '/assets/sounds/takeMushroom.mp3');
+    this.game.load.audio('dead', '/assets/sounds/dead.wav');
 
   }
 
   create() {
 
     this.game.physics.startSystem(Phaser.Physics.ARCADE)
-
-    this.browndoor = this.game.add.sprite(80, 615 , 'browndoor');
+    this.dsound = this.game.add.audio('dungeon')
+    this.dsound.loop = true
+    this.dsound.play()
 
     this.MAX_SPEED = 500; // pixels/second
     this.ACCELERATION = 1500; // pixels/second/second
@@ -28,19 +38,26 @@ export default class extends Phaser.State {
     this.map = this.game.add.tilemap('tilemap');
     this.map.addTilesetImage('tiles', 'tiles');
     this.jumpSound = this.game.add.audio('jump')
+    this.tMushSound = this.game.add.audio('takeMushroom')
+    this.dead = this.game.add.audio('dead')
+    this.game.add.sprite(200, 200, '3hearts');
 
     this.terrainLayer = this.map.createLayer('MyTerrain1');
     this.colLayer = this.map.createLayer('Spawn');
     this.colLayer = this.map.createLayer('colisionable');
     this.map.setCollisionBetween(1, 5000, true, 'colisionable');
 
-    var result = this.findObjectsByType('item', this.map, 'object')
+    var result = this.findObjectsByType('item', this.map, 'coinsObject')
+    var resultEnemy = this.findObjectsByType('item', this.map, 'enemyObject')
 
     this.terrainLayer.resizeWorld();
     this.terrainLayer.wrap = true;
 
     this.spawnPlayer()
-    //this.createItems()
+    this.createItems()
+    this.createEnemy()
+    this.setScoreText()
+    this.setParticles()
 
     this.game.physics.enable(this.player, Phaser.Physics.ARCADE);
 
@@ -48,24 +65,25 @@ export default class extends Phaser.State {
     this.player.body.setSize(20, 20, 0, 0)
     this.player.body.maxVelocity.setTo(this.MAX_SPEED, this.MAX_SPEED * 10); // x, y
     this.player.body.drag.setTo(this.DRAG, 0); // x, y
-    game.physics.arcade.gravity.y = this.GRAVITY;
+    //game.physics.arcade.gravity.y = this.GRAVITY;
 
     this.player.animations.add('idle', [3, 4, 5, 4], 5, true)
     this.player.animations.play('idle')
+    this.player.body.gravity.y = this.GRAVITY
 
     this.keyEsc = this.game.input.keyboard.addKey(Phaser.Keyboard.ESC);
 
     this.cursors = this.game.input.keyboard.createCursorKeys();
 
-    //new SoundManager(this.game).add('dungeon',1,true)
-
+    this.Collectedcoins = 0
 
   }
 
   update() {
 
-
     this.game.physics.arcade.collide(this.player, this.colLayer);
+    this.game.physics.arcade.overlap(this.player, this.items, this.collect, null, this);
+    this.game.physics.arcade.overlap(this.player, this.enemys, this.die, null, this);
 
     // this.player.body.velocity.y = 0;
     // this.player.body.velocity.x = 0;
@@ -75,10 +93,11 @@ export default class extends Phaser.State {
     if (this.leftInputIsActive()) {
       // If the LEFT key is down, set the player velocity to move left
       this.player.body.acceleration.x = -this.ACCELERATION;
+      this.player.frame = 2
     } else if (this.rightInputIsActive()) {
       // If the RIGHT key is down, set the player velocity to move right
       this.player.body.acceleration.x = this.ACCELERATION;
-
+      this.player.frame = 1
     } else {
       this.player.body.acceleration.x = 0;
     }
@@ -89,21 +108,81 @@ export default class extends Phaser.State {
     if (onTheGround && this.upInputIsActive()) {
       // Jump when the player is touching the ground and the up arrow is pressed
       this.player.body.velocity.y = this.JUMP_SPEED;
+      this.player.frame = 3
       this.jumpSound.play()
     }
 
 
   }
 
+  setScoreText() {
+    this.scoreText = game.add.text(32, 35, "Score: 0", {
+      font: 'bold 15pt Arial',
+      fill: 'red',
+      align: 'center'
+    });
+  }
+
+  setParticles () {
+    this.explosion = game.add.emitter(0,0,20)
+    this.explosion.makeParticles('exp')
+    this.explosion.setYSpeed(-150,150)
+    this.explosion.setXSpeed(-150,150)
+    // this.explosion.gravity.set(0,200)
+  }
+
+  die (player, enemy) {
+    // Effect
+    game.camera.shake(0.05,200)
+    // So de morir
+    this.dead.play()
+    // Descomptar vides
+    // Tornar a colocar usuari en posicio inicial
+    this.playerIsDead = true
+
+    this.explosion.x = this.player.x
+    this.explosion.y = this.player.y+10
+    this.explosion.start(true, 300, null, 20)
+
+    this.spawnPlayer()
+  }
+
+  collect(player, collectable) {
+    this.Collectedcoins = this.Collectedcoins + 1
+    this.scoreText.setText('Score: ' + this.Collectedcoins)
+    this.tMushSound.play()
+    this.player.scale.setTo(this.Collectedcoins+0.2,this.Collectedcoins+0.2)
+    collectable.destroy();
+  }
+
   createItems() {
     this.items = this.game.add.group();
     this.items.enableBody = true;
     var item;
-    var result = this.findObjectsByType('item', this.map, 'object');
+    var result = this.findObjectsByType('item', this.map, 'coinsObject');
     result.forEach(function(element){
       this.createFromTiledObject(element, this.items);
     }, this);
 
+  }
+
+  createEnemy() {
+    this.enemys = this.game.add.group();
+    this.enemys.enableBody = true;
+    var enemy;
+    var resultE = this.findObjectsByType('enemy', this.map, 'enemyObject');
+    resultE.forEach(function(element){
+      this.createFromTiledObject(element, this.enemys);
+    }, this);
+
+  }
+
+  createFromTiledObject(element, group) {
+    var sprite = group.create(element.x, element.y, element.properties.sprite);
+    //copy all properties to the sprite
+    Object.keys(element.properties).forEach(function(key){
+      sprite[key] = element.properties[key];
+    });
   }
 
   findObjectsByType(type, map, layer) {
@@ -122,15 +201,15 @@ export default class extends Phaser.State {
 
   inputs() {
     if (this.keyEsc.isDown) {
+      this.dsound.stop()
       this.game.state.start('Menu');
-
     }
   }
 
   spawnPlayer() {
     if (this.playerIsDead) {
-      this.player.x = 350
-      this.player.y = 101
+      this.player.x = 80
+      this.player.y = 615
       this.playerIsDead = false
     } else {
       this.player = new Player({

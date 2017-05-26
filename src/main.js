@@ -22,7 +22,7 @@ class Game extends Phaser.Game {
     this.state.add('Menu', MenuState, false)
     this.state.add('Nivell1', N1State, false)
 
-    this.state.start('Menu')
+    this.state.start('Nivell1')
 
   }
 }

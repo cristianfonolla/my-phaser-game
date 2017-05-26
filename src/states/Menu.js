@@ -2,7 +2,6 @@ import Phaser from 'phaser'
 
 export default class extends Phaser.State {
 
-
   preload() {
     this.game.load.image('btnMusicOff', 'assets/images/moff.png');
     this.game.load.audio('dungeon', '/assets/sounds/dsound.mp3', true)
@@ -80,7 +79,9 @@ export default class extends Phaser.State {
     this.startText.setShadow(3, 3, 'rgba(0,0,0,0.5)', 5);
     this.startText.anchor.set(0.5);
     this.startText.inputEnabled = true;
+    var that = this
     this.startText.events.onInputUp.add(function () {
+      that.dsound.stop()
       game.state.start('Nivell1');
     });
 
