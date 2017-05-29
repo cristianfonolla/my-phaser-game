@@ -8,26 +8,34 @@ export default class extends Phaser.State {
 
     this.game.load.tilemap('tilemap', '/assets/tilemaps/myterrain.json', null, Phaser.Tilemap.TILED_JSON);
     this.game.load.image('tiles', '/assets/tilemaps/terrain_atlas.png');
-    this.game.load.image('browndoor', '/assets/images/browndoor.png');
+    this.game.load.image('door', '/assets/images/browndoor.png');
     this.game.load.image('mushroom', '/assets/images/mushroom.png');
+    this.game.load.image('bluemushroom', '/assets/images/bluemushroom.png');
     this.game.load.image('php', '/assets/images/php.png');
     this.game.load.image('exp', '/assets/images/exp.png');
-    this.game.load.image('3hearts', '/assets/images/3hearts.png');
-    this.game.load.image('2hearts', '/assets/images/2hearts.png');
-    this.game.load.image('1hearts', '/assets/images/1hearts.png');
+    this.game.load.image('3hearts', '/assets/images/w3hearts.png');
+    this.game.load.image('2hearts', '/assets/images/w2hearts.png');
+    this.game.load.image('1hearts', '/assets/images/w1hearts.png');
+    this.game.load.image('minimush', '/assets/images/minimush.png');
     this.game.load.spritesheet('player', '/assets/images/player.png', 28, 22);
     this.game.load.audio('jump', '/assets/sounds/jump.wav');
     this.game.load.audio('takeMushroom', '/assets/sounds/takeMushroom.mp3');
     this.game.load.audio('dead', '/assets/sounds/dead.wav');
+    this.game.load.audio('windowsIN', '/assets/sounds/windowsIN.wav');
 
   }
 
   create() {
 
     this.game.physics.startSystem(Phaser.Physics.ARCADE)
+
     this.dsound = this.game.add.audio('dungeon')
     this.dsound.loop = true
-    this.dsound.play()
+
+    if(window.enableSound || window.enableSound == null) {
+      this.dsound.volume = 0.2
+      this.dsound.play()
+    }
 
     this.MAX_SPEED = 500; // pixels/second
     this.ACCELERATION = 1500; // pixels/second/second
@@ -40,15 +48,22 @@ export default class extends Phaser.State {
     this.jumpSound = this.game.add.audio('jump')
     this.tMushSound = this.game.add.audio('takeMushroom')
     this.dead = this.game.add.audio('dead')
-    this.game.add.sprite(200, 200, '3hearts');
+    this.windowsIN = this.game.add.audio('windowsIN')
 
     this.terrainLayer = this.map.createLayer('MyTerrain1');
     this.colLayer = this.map.createLayer('Spawn');
     this.colLayer = this.map.createLayer('colisionable');
     this.map.setCollisionBetween(1, 5000, true, 'colisionable');
+    this.threeHearts = this.game.add.sprite(0, 20, '3hearts');
+    this.twoHearts = this.game.add.sprite(0, 20, '2hearts');
+    this.oneHeart = this.game.add.sprite(0, 20, '1hearts');
+    this.lifeCounter = 3
 
     var result = this.findObjectsByType('item', this.map, 'coinsObject')
     var resultEnemy = this.findObjectsByType('item', this.map, 'enemyObject')
+    var resultOneUp = this.findObjectsByType('item', this.map, 'oneUpObject')
+    var resultDown = this.findObjectsByType('item', this.map, 'downObject')
+    var resultDoor = this.findObjectsByType('item', this.map, 'doorObject')
 
     this.terrainLayer.resizeWorld();
     this.terrainLayer.wrap = true;
@@ -56,6 +71,8 @@ export default class extends Phaser.State {
     this.spawnPlayer()
     this.createItems()
     this.createEnemy()
+    this.createOneUps()
+    this.createDoors()
     this.setScoreText()
     this.setParticles()
 
@@ -65,7 +82,6 @@ export default class extends Phaser.State {
     this.player.body.setSize(20, 20, 0, 0)
     this.player.body.maxVelocity.setTo(this.MAX_SPEED, this.MAX_SPEED * 10); // x, y
     this.player.body.drag.setTo(this.DRAG, 0); // x, y
-    //game.physics.arcade.gravity.y = this.GRAVITY;
 
     this.player.animations.add('idle', [3, 4, 5, 4], 5, true)
     this.player.animations.play('idle')
@@ -84,9 +100,11 @@ export default class extends Phaser.State {
     this.game.physics.arcade.collide(this.player, this.colLayer);
     this.game.physics.arcade.overlap(this.player, this.items, this.collect, null, this);
     this.game.physics.arcade.overlap(this.player, this.enemys, this.die, null, this);
-
-    // this.player.body.velocity.y = 0;
-    // this.player.body.velocity.x = 0;
+    this.game.physics.arcade.overlap(this.player, this.mini, this.makeDown, null, this);
+    this.game.physics.arcade.overlap(this.player, this.doors, this.changeLevel, null, this);
+    if(this.lifeCounter<3) {
+      this.game.physics.arcade.overlap(this.player, this.OneUps, this.oneUp, null, this);
+    }
 
     this.inputs()
 
@@ -112,7 +130,95 @@ export default class extends Phaser.State {
       this.jumpSound.play()
     }
 
+    this.seeLifes()
+    
+  }
 
+
+
+  makeDown(player,collectable) {
+
+    this.player.scale.setTo(0.3,0.3)
+    collectable.destroy()
+
+  }
+
+  changeLevel(player,door){
+    this.dsound.stop()
+    this.game.state.start('Nivell2');
+  }
+
+  oneUp(player, collectable) {
+    this.lifeCounter = this.lifeCounter + 1
+    this.windowsIN.volume = 15
+    this.windowsIN.play()
+    collectable.destroy()
+  }
+
+  createDoors() {
+
+    this.doors = this.game.add.group();
+    this.doors.enableBody = true;
+    var OneUp;
+    var result = this.findObjectsByType('door', this.map, 'doorObject');
+    result.forEach(function(element){
+      this.createFromTiledObject(element, this.doors);
+    }, this);
+
+  }
+
+  createOneUps() {
+
+    this.OneUps = this.game.add.group();
+    this.OneUps.enableBody = true;
+    var OneUp;
+    var result = this.findObjectsByType('oneUp', this.map, 'oneUpObject');
+    result.forEach(function(element){
+      this.createFromTiledObject(element, this.OneUps);
+    }, this);
+
+    this.mini = this.game.add.group();
+    this.mini.enableBody = true;
+    var mini;
+    var resultMini = this.findObjectsByType('mini', this.map, 'downObject');
+    resultMini.forEach(function(element){
+      this.createFromTiledObject(element, this.mini);
+    }, this);
+
+  }
+
+  seeLifes(){
+    if(this.lifeCounter==3){
+      this.threeHearts.visible = true
+    } else if (this.lifeCounter==2) {
+      this.threeHearts.visible = false
+      this.twoHearts.visible = true
+    } else if (this.lifeCounter==1) {
+      this.twoHearts.visible = false
+    } else if (this.lifeCounter<=0) {
+      this.game.state.start('GameOver');
+
+      // this.gameovertext = game.add.text(432, 100, "YOU HAVE LOSE", {
+      //   font: '45pt Arial',
+      //   fill: 'green',
+      //   align: 'center'
+      // });
+      // this.gameovertext.anchor.set(0.5)
+      //
+      // this.continueBtn = game.add.text(432, 100, "CONTINUE", {
+      //   font: '45pt Arial',
+      //   fill: 'green',
+      //   align: 'center'
+      // });
+      // this.continueBtn.anchor.set(0.5)
+      // this.continueBtn.inputEnabled = true;
+      // var that = this
+      // this.continueBtn.events.onInputUp.add(function () {
+      //   that.dsound.stop()
+      //   game.state.start('GameOver');
+      // });
+
+    }
   }
 
   setScoreText() {
@@ -143,7 +249,7 @@ export default class extends Phaser.State {
     this.explosion.x = this.player.x
     this.explosion.y = this.player.y+10
     this.explosion.start(true, 300, null, 20)
-
+    this.lifeCounter = this.lifeCounter - 1
     this.spawnPlayer()
   }
 
@@ -151,7 +257,7 @@ export default class extends Phaser.State {
     this.Collectedcoins = this.Collectedcoins + 1
     this.scoreText.setText('Score: ' + this.Collectedcoins)
     this.tMushSound.play()
-    this.player.scale.setTo(this.Collectedcoins+0.2,this.Collectedcoins+0.2)
+    //this.player.scale.setTo(this.Collectedcoins+0.2,this.Collectedcoins+0.2)
     collectable.destroy();
   }
 

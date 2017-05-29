@@ -5,6 +5,8 @@ import Phaser from 'phaser'
 
 import MenuState from './states/Menu'
 import N1State from './states/Nivell1'
+import N2State from './states/Nivell2'
+import GameOver from './states/GameOver'
 
 import config from './config'
 
@@ -21,8 +23,10 @@ class Game extends Phaser.Game {
     // this.state.add('Game', GameState, false)
     this.state.add('Menu', MenuState, false)
     this.state.add('Nivell1', N1State, false)
+    this.state.add('Nivell2', N2State, false)
+    this.state.add('GameOver', GameOver, false)
 
-    this.state.start('Nivell1')
+    this.state.start('Nivell2')
 
   }
 }

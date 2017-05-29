@@ -11,9 +11,10 @@ export default class extends Phaser.State {
 
     game.stage.backgroundColor = "black";
     game.stage.disableVisibilityChange = true;
-
+    window.enabled = true
     this.dsound = this.game.add.audio('dungeon')
     this.dsound.loop = true
+    this.dsound.volume = 0.2
     this.dsound.play()
 
     this.setTitle();
@@ -21,6 +22,7 @@ export default class extends Phaser.State {
     this.setBtnMusicOff();
     this.setBtnMusicOn();
     this.btnMusicOn.visible = false
+
   }
 
   setTitle() {
@@ -46,6 +48,7 @@ export default class extends Phaser.State {
     this.btnMusicOff.inputEnabled = true;
     var that = this
     this.btnMusicOff.events.onInputUp.add(function () {
+      window.enableSound = false
       that.btnMusicOff.visible = false
       that.btnMusicOn.visible = true
       that.dsound.mute = true
@@ -63,6 +66,7 @@ export default class extends Phaser.State {
     this.btnMusicOn.inputEnabled = true;
     var that = this
     this.btnMusicOn.events.onInputUp.add(function () {
+      window.enableSound = true
       that.btnMusicOn.visible = false
       that.btnMusicOff.visible = true
       that.dsound.mute = false
