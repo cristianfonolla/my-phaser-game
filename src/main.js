@@ -15,7 +15,6 @@ class Game extends Phaser.Game {
     const docElement = document.documentElement
     const width = docElement.clientWidth > config.gameWidth ? config.gameWidth : docElement.clientWidth
     const height = docElement.clientHeight > config.gameHeight ? config.gameHeight : docElement.clientHeight
-
     super(width, height, Phaser.CANVAS, 'content', null)
 
     // this.state.add('Boot', BootState, false)
@@ -26,7 +25,7 @@ class Game extends Phaser.Game {
     this.state.add('Nivell2', N2State, false)
     this.state.add('GameOver', GameOver, false)
 
-    this.state.start('Nivell2')
+    this.state.start('Menu')
 
   }
 }

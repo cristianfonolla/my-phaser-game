@@ -5,6 +5,8 @@ export default class extends Phaser.State {
   preload() {
     this.game.load.image('btnMusicOff', 'assets/images/moff.png');
     this.game.load.audio('dungeon', '/assets/sounds/dsound.mp3', true)
+    // console.log(game.world.width + ' preload menu width')
+    // console.log(game.world.height + ' preload menu height')
   }
 
   create() {

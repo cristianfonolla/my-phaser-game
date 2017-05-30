@@ -23,6 +23,9 @@ export default class extends Phaser.State {
     this.game.load.audio('dead', '/assets/sounds/dead.wav');
     this.game.load.audio('windowsIN', '/assets/sounds/windowsIN.wav');
 
+    // console.log(game.world.width + ' preload 1 width')
+    // console.log(game.world.height + ' preload 1 height')
+
   }
 
   create() {
@@ -32,7 +35,7 @@ export default class extends Phaser.State {
     this.dsound = this.game.add.audio('dungeon')
     this.dsound.loop = true
 
-    if(window.enableSound || window.enableSound == null) {
+    if (window.enableSound || window.enableSound == null) {
       this.dsound.volume = 0.2
       this.dsound.play()
     }
@@ -102,7 +105,7 @@ export default class extends Phaser.State {
     this.game.physics.arcade.overlap(this.player, this.enemys, this.die, null, this);
     this.game.physics.arcade.overlap(this.player, this.mini, this.makeDown, null, this);
     this.game.physics.arcade.overlap(this.player, this.doors, this.changeLevel, null, this);
-    if(this.lifeCounter<3) {
+    if (this.lifeCounter < 3) {
       this.game.physics.arcade.overlap(this.player, this.OneUps, this.oneUp, null, this);
     }
 
@@ -131,19 +134,21 @@ export default class extends Phaser.State {
     }
 
     this.seeLifes()
-    
+
   }
 
 
+  makeDown(player, collectable) {
 
-  makeDown(player,collectable) {
+    this.Collectedcoins = this.Collectedcoins + 2
+    this.scoreText.setText('Score: ' + this.Collectedcoins)
 
-    this.player.scale.setTo(0.3,0.3)
+    this.player.scale.setTo(0.3, 0.3)
     collectable.destroy()
 
   }
 
-  changeLevel(player,door){
+  changeLevel(player, door) {
     this.dsound.stop()
     this.game.state.start('Nivell2');
   }
@@ -161,7 +166,7 @@ export default class extends Phaser.State {
     this.doors.enableBody = true;
     var OneUp;
     var result = this.findObjectsByType('door', this.map, 'doorObject');
-    result.forEach(function(element){
+    result.forEach(function (element) {
       this.createFromTiledObject(element, this.doors);
     }, this);
 
@@ -173,7 +178,7 @@ export default class extends Phaser.State {
     this.OneUps.enableBody = true;
     var OneUp;
     var result = this.findObjectsByType('oneUp', this.map, 'oneUpObject');
-    result.forEach(function(element){
+    result.forEach(function (element) {
       this.createFromTiledObject(element, this.OneUps);
     }, this);
 
@@ -181,43 +186,20 @@ export default class extends Phaser.State {
     this.mini.enableBody = true;
     var mini;
     var resultMini = this.findObjectsByType('mini', this.map, 'downObject');
-    resultMini.forEach(function(element){
+    resultMini.forEach(function (element) {
       this.createFromTiledObject(element, this.mini);
     }, this);
 
   }
 
-  seeLifes(){
-    if(this.lifeCounter==3){
+  seeLifes() {
+    if (this.lifeCounter == 3) {
       this.threeHearts.visible = true
-    } else if (this.lifeCounter==2) {
+    } else if (this.lifeCounter == 2) {
       this.threeHearts.visible = false
       this.twoHearts.visible = true
-    } else if (this.lifeCounter==1) {
+    } else if (this.lifeCounter == 1) {
       this.twoHearts.visible = false
-    } else if (this.lifeCounter<=0) {
-      this.game.state.start('GameOver');
-
-      // this.gameovertext = game.add.text(432, 100, "YOU HAVE LOSE", {
-      //   font: '45pt Arial',
-      //   fill: 'green',
-      //   align: 'center'
-      // });
-      // this.gameovertext.anchor.set(0.5)
-      //
-      // this.continueBtn = game.add.text(432, 100, "CONTINUE", {
-      //   font: '45pt Arial',
-      //   fill: 'green',
-      //   align: 'center'
-      // });
-      // this.continueBtn.anchor.set(0.5)
-      // this.continueBtn.inputEnabled = true;
-      // var that = this
-      // this.continueBtn.events.onInputUp.add(function () {
-      //   that.dsound.stop()
-      //   game.state.start('GameOver');
-      // });
-
     }
   }
 
@@ -229,17 +211,18 @@ export default class extends Phaser.State {
     });
   }
 
-  setParticles () {
-    this.explosion = game.add.emitter(0,0,20)
+  setParticles() {
+    this.explosion = game.add.emitter(0, 0, 20)
     this.explosion.makeParticles('exp')
-    this.explosion.setYSpeed(-150,150)
-    this.explosion.setXSpeed(-150,150)
+    this.explosion.setYSpeed(-150, 150)
+    this.explosion.setXSpeed(-150, 150)
     // this.explosion.gravity.set(0,200)
   }
 
-  die (player, enemy) {
+  die(player, enemy) {
+    this.player.scale.setTo(1, 1)
     // Effect
-    game.camera.shake(0.05,200)
+    this.game.camera.shake(0.05, 200)
     // So de morir
     this.dead.play()
     // Descomptar vides
@@ -247,13 +230,22 @@ export default class extends Phaser.State {
     this.playerIsDead = true
 
     this.explosion.x = this.player.x
-    this.explosion.y = this.player.y+10
+    this.explosion.y = this.player.y + 10
     this.explosion.start(true, 300, null, 20)
     this.lifeCounter = this.lifeCounter - 1
     this.spawnPlayer()
+
+    if (this.lifeCounter <= 0) {
+      this.dsound.stop()
+      setTimeout(function () {
+        this.game.state.start('GameOver');
+      }, 200)
+    }
   }
 
+
   collect(player, collectable) {
+
     this.Collectedcoins = this.Collectedcoins + 1
     this.scoreText.setText('Score: ' + this.Collectedcoins)
     this.tMushSound.play()
@@ -266,7 +258,7 @@ export default class extends Phaser.State {
     this.items.enableBody = true;
     var item;
     var result = this.findObjectsByType('item', this.map, 'coinsObject');
-    result.forEach(function(element){
+    result.forEach(function (element) {
       this.createFromTiledObject(element, this.items);
     }, this);
 
@@ -277,7 +269,7 @@ export default class extends Phaser.State {
     this.enemys.enableBody = true;
     var enemy;
     var resultE = this.findObjectsByType('enemy', this.map, 'enemyObject');
-    resultE.forEach(function(element){
+    resultE.forEach(function (element) {
       this.createFromTiledObject(element, this.enemys);
     }, this);
 
@@ -286,15 +278,15 @@ export default class extends Phaser.State {
   createFromTiledObject(element, group) {
     var sprite = group.create(element.x, element.y, element.properties.sprite);
     //copy all properties to the sprite
-    Object.keys(element.properties).forEach(function(key){
+    Object.keys(element.properties).forEach(function (key) {
       sprite[key] = element.properties[key];
     });
   }
 
   findObjectsByType(type, map, layer) {
     var result = []
-    map.objects[layer].forEach(function(element){
-      if(element.properties.type === type) {
+    map.objects[layer].forEach(function (element) {
+      if (element.properties.type === type) {
         //Phaser uses top left, Tiled bottom left so we have to adjust the y position
         //also keep in mind that the cup images are a bit smaller than the tile which is 16x16
         //so they might not be placed in the exact pixel position as in Tiled
@@ -370,11 +362,6 @@ export default class extends Phaser.State {
 
     return isActive;
   }
-
-
-
-
-
 
 
 }

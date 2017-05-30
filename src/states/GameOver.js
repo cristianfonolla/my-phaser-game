@@ -3,8 +3,15 @@ import Phaser from 'phaser'
 export default class extends Phaser.State {
 
   preload() {
+
+    this.game.world.width = 864
+    this.game.world.height = 704
+
     this.game.load.tilemap('gameover', '/assets/tilemaps/gameover.json', null, Phaser.Tilemap.TILED_JSON);
     this.game.load.image('tiles', '/assets/tilemaps/terrain_atlas.png');
+
+    console.log(game.world.width + ' preload go width')
+    console.log(game.world.height + ' preload go height')
   }
 
   create() {
@@ -19,9 +26,10 @@ export default class extends Phaser.State {
   }
 
   setGameOverText() {
+
     this.titleText = this.game.add.text(
       this.game.world.centerX,
-      this.game.world.centerY - 250,
+      this.game.world.centerY - 200,
       "Game Over!",
       {
       font: 'bold 25pt Arial',
@@ -34,7 +42,6 @@ export default class extends Phaser.State {
   }
 
   setRestartBtn() {
-    console.log(game.world.centerX)
     this.btnRestart = this.game.add.text(
       this.game.world.centerX,
       this.game.world.centerY + 100,

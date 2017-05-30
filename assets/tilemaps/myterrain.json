@@ -69,6 +69,7 @@
                  "name":"",
                  "properties":
                     {
+                     "bus":"tp",
                      "sprite":"mushroom",
                      "type":"item"
                     },
@@ -306,6 +307,23 @@
                  "width":43,
                  "x":789,
                  "y":230
+                }, 
+                {
+                 "gid":402,
+                 "height":32,
+                 "id":73,
+                 "name":"",
+                 "properties":
+                    {
+                     "sprite":"minimush",
+                     "type":"mini"
+                    },
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":32,
+                 "x":419,
+                 "y":66
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -316,7 +334,7 @@
         }, 
         {
          "draworder":"topdown",
-         "height":100,
+         "height":0,
          "name":"doorObject",
          "objects":[
                 {
@@ -339,11 +357,11 @@
          "opacity":1,
          "type":"objectgroup",
          "visible":true,
-         "width":100,
+         "width":0,
          "x":0,
          "y":0
         }],
- "nextobjectid":69,
+ "nextobjectid":75,
  "orientation":"orthogonal",
  "properties":
     {

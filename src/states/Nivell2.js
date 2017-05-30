@@ -6,6 +6,9 @@ export default class extends Phaser.State {
 
   preload() {
 
+    this.game.world.width = 864
+    this.game.world.height = 704
+
     this.game.load.tilemap('tilemap2', '/assets/tilemaps/myterrain2.json', null, Phaser.Tilemap.TILED_JSON);
     this.game.load.image('terrain_atlas', '/assets/tilemaps/terrain_atlas.png');
     this.game.load.image('bullet', '/assets/images/cr7.png');
@@ -14,6 +17,11 @@ export default class extends Phaser.State {
     this.game.load.spritesheet('player', '/assets/images/fcb.png', 32, 32);
     this.game.load.audio('gol1', '/assets/sounds/gol1.wav');
     this.game.load.audio('gol2', '/assets/sounds/gol2.wav');
+
+    this.keyEsc = this.game.input.keyboard.addKey(Phaser.Keyboard.ESC);
+
+    // console.log(game.world.width + ' preload 2 width')
+    // console.log(game.world.height + ' preload 2 height')
 
   }
 
@@ -46,6 +54,12 @@ export default class extends Phaser.State {
       fill: 'black',
       align: 'center'
     });
+  }
+
+  inputs() {
+    if (this.keyEsc.isDown) {
+      this.game.state.start('Menu');
+    }
   }
 
   createTargets() {
@@ -149,6 +163,7 @@ export default class extends Phaser.State {
       this.shootBullet();
     }
 
+    this.inputs()
     
   }
 
